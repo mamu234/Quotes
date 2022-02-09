@@ -1,6 +1,9 @@
-<p>
-    {{quote.description}}
-  </p>
 
   <p>{{quote.description}}</p>
+  <p>This goal will be complete in {{quote.completeDate|dateCount}} days</p>
+  <p>{{quote.description}}</p>
 <button (click)= 'quoteComplete(true)'>Complete</button>
+
+
+
+
