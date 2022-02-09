@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Quote} from '../quote';
 
+
 @Component({
   selector: 'app-quote',
   templateUrl: './quote.component.html',
@@ -9,14 +10,17 @@ import {Quote} from '../quote';
 export class QuoteComponent implements OnInit {
 
   quotes:Quote[] = [
-    {id:1, name:'African Quotes',description:'These are common African proverbs to instill good behaviour'},
-    {id:3,name:'Common Quotes',description:'These are general quotes used everyday'},
-    {id:4,name:'easy Quotes',description:'These quotes are easy to understand'},
-    {id:5,name:'scholarly Quotes',description:' Quotes by famous authors'},
+    new Quote(1,'African Quotes','Only a fool tests the depth of a river with both feet'),
+    new Quote (2,'Common Quotes','A stich in timesaves nine'),
+    new Quote(3, 'easy Quotes','Get busy living or get busy dying'),
+    new Quote (4,'scholarly Quotes','Many of life’s failures are people who did not realize how close they were to success when they gave up.'),
     
   ];
 
-
+  toggleDetails(index){
+    this.quotes[index].showDescription = !this.quotes[index].showDescription;
+  }
+  
   constructor() { }
 
   ngOnInit(): void {

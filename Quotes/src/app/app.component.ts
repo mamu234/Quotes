@@ -8,11 +8,9 @@ import { Quote} from './quote';
 })
 export class AppComponent {
 quotes:Quote[] = [
-  {id:1, name:'African Quotes',description:'These are common African proverbs to instill good behaviour'},
-  {id:2,name:'Famous Quotes',description:'These are general quotes used everyday'},
-  {id:3,name:'Common Quotes',description:'These quotes are easy to understand'},
-  {id:4,name:'easy Quotes',description:'These quotes are easy to understand'},
-  {id:5,name:'scholarly Quotes',description:'These quotes are easy to understand'},
-
+  new Quote(1,'African Quotes','These are common African proverbs to instill good behaviour'),
+  new Quote (2,'Common Quotes','These are general quotes used everyday'),
+  new Quote(3, 'easy Quotes','These quotes are easy to understand'),
+  new Quote (4,'scholarly Quotes','Quotes by famous authors'),
 ];
 }
